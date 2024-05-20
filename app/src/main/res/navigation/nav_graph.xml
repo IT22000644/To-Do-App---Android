@@ -33,7 +33,7 @@
 
         <argument
             android:name="task"
-            app:argType="com.example.taskmanagementapp.models.Task"
+            app:argType="com.example.taskmanagementapp.model.Task"
             app:nullable="true"/>
     </fragment>
 </navigation>

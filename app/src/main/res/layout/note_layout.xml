@@ -23,7 +23,7 @@
                 android:id="@+id/noteTitle"
                 android:layout_weight="200"
                 android:textColor="@color/red"
-                android:fontFamily="@font/Poppins"
+                android:fontFamily="@font/poppins"
                 android:text="Note Title"
                 android:textStyle="bold"
                 android:textSize="18sp"/>
@@ -36,7 +36,7 @@
                 android:maxHeight="170dp"
                 android:text="Description"
                 android:textSize="14sp"
-                android:fontFamily="@font/Poppins"
+                android:fontFamily="@font/poppins"
                 android:textColor="@color/pink"/>
 
         </LinearLayout>

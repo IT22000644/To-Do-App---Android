@@ -24,9 +24,18 @@ class TaskAdapter : RecyclerView.Adapter<TaskAdapter.TaskViewHolder>() {
     }
 
     val differ = AsyncListDiffer(this, differCallback)
+
+    var onItemClickListener: ((Task) -> Unit)? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
-        return TaskViewHolder(
+        val viewHolder = TaskViewHolder(
             NoteLayoutBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        viewHolder.itemView.setOnClickListener {
+            val position = viewHolder.adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                onItemClickListener?.invoke(differ.currentList[position])
+            }
+        }
+        return viewHolder
     }
 
     override fun getItemCount(): Int {
